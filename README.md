@@ -5,4 +5,4 @@ A command line game written in Ruby.
 
 This is from The Odin Project's [Ruby](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-programming/lessons/mastermind) curriculum.
 
-[Live Preview]() will be added.
+[Live Preview](https://replit.com/@egemen48/mastermind#main.rb) will be added.
