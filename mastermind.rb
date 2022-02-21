@@ -7,7 +7,7 @@ module PlayerMode
   end
 
   def say_guess
-    puts 'Try to guess the 4 secret numbers.'
+    puts "\nTry to guess the 4 secret numbers."
   end
 
   def say_end
@@ -77,8 +77,7 @@ module IntelligenceMode
   end
 
   def compare(secret)
-    p guess = computer_random_guess
-    p secret
+    guess = computer_random_guess
     correct = 0
     partial = 0
 
@@ -103,7 +102,7 @@ module IntelligenceMode
   end
 
   def say_create
-    puts 'Create a sequence that contains 4 numbers between 1-6.'
+    puts "\nCreate a sequence that contains 4 numbers between 1-6."
   end
 
   def say_good_news
@@ -173,5 +172,25 @@ class YouCreate
   end
 end
 
-# YouGuess.new.play
-YouCreate.new.play
+def play
+    is_on = true
+    while is_on
+        puts "Do you wanna be a codemaker or codebreaker?\n "
+        puts "Press one (1) for being a codemaker!"
+        puts "Press two (2) for being a codebreaker! "
+        input = gets
+        puts "--------------------------------------"
+        if input.to_i == 1
+            YouCreate.new.play
+            is_on = false
+        elsif input.to_i == 2
+            YouGuess.new.play
+            is_on = false
+        else
+            puts "I don't understand your input, try again."
+            is_on = true
+        end
+    end
+end
+
+play
